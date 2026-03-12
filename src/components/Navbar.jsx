@@ -1,20 +1,16 @@
-import React from "react";
+import ThemeToggle from "./ThemeToggle";
 
 function Navbar() {
   return (
-    <nav style={{
-      display: "flex",
-      justifyContent: "space-between",
-      padding: "1rem 2rem",
-      background: "#111",
-      color: "white"
-    }}>
-      <h2>FlashMind</h2>
+    <nav className="navbar">
+      <div className="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">Qui sommes-nous</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-      <div style={{display:"flex", gap:"20px"}}>
-        <a href="#services" style={{color:"white"}}>Services</a>
-        <a href="#about" style={{color:"white"}}>Qui sommes-nous</a>
-        <a href="#contact" style={{color:"white"}}>Contact</a>
+      <div className="nav-toggle">
+        <ThemeToggle />
       </div>
     </nav>
   );
