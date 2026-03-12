@@ -4,6 +4,8 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import ThemeToggle from './components/ThemeToggle';
 import FlashcardDemo from './components/FlashcardDemo';
+import Navbar from "./components/Navbar";
+import About from "./components/About";
 
 function App() {
   return (
@@ -15,6 +17,18 @@ function App() {
       <Services />
       <Contact />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <Services />
+      <About />
+      <Contact />
+    </>
   );
 }
 
