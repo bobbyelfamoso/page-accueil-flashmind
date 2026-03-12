@@ -1,16 +1,99 @@
-# React + Vite
+# FlashMind – Site d'accueil
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce dépôt contient le site d'accueil du projet FlashMind, qui centralise les différents services de la plateforme (StudyFlow, Flashcards, etc.).
 
-Currently, two official plugins are available:
+Le site présente les fonctionnalités du projet, les valeurs de l'équipe et permet d'accéder aux différents outils développés.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Lien du site
 
-## React Compiler
+https://page-accueil-flashmind.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Technologies utilisées
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript
+- Vercel (hébergement et déploiement)
+- API serverless (Vercel API Routes)
+
+---
+
+## Architecture
+
+Le projet utilise une architecture frontend + API serverless.
+
+Frontend React
+      ↓
+Vercel Hosting
+      ↓
+API serverless (/api/api)
+      ↓
+Services externes
+   - StudyFlow
+   - Flashcards Firebase
+
+Le frontend est développé avec React et Vite et déployé automatiquement sur Vercel via GitHub.
+
+Chaque modification du code déclenche automatiquement un nouveau build et un redéploiement.
+
+---
+
+## API
+
+Une API serverless simple est disponible pour exposer les services de la plateforme.
+
+Endpoint :
+
+/api/api
+
+Elle renvoie les informations des services au format JSON.
+
+Exemple :
+
+{
+  "message": "API FlashMind",
+  "services": [
+    {
+      "name": "StudyFlow",
+      "url": "https://bobbyelfamoso.github.io/studyflow/"
+    },
+    {
+      "name": "Flashcards",
+      "url": "https://site-flash-card-b59c4.web.app"
+    }
+  ]
+}
+
+---
+
+## Déploiement
+
+Le projet est déployé sur Vercel.
+
+Workflow :
+
+Développeur
+     ↓
+Push GitHub
+     ↓
+Build automatique Vercel
+     ↓
+Déploiement
+
+---
+
+## Objectif du site
+
+Le site d'accueil a pour objectif de :
+
+- présenter le projet FlashMind
+- centraliser l'accès aux services
+- servir de portail vers les différents outils pédagogiques développés.
+
+---
+
+## Auteurs
+
+Projet réalisé dans le cadre d’un projet étudiant.
