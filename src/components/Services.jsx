@@ -3,32 +3,63 @@ const Services = () => {
         <section style={{ padding: '6rem 0' }} id="services">
             <div className="container">
                 <h2>Nos Services</h2>
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                    gap: '2rem',
-                    marginBottom: '4rem'
-                }}>
-                    <div className="card" style={cardStyle}>
+
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                        gap: '2rem',
+                        marginBottom: '4rem'
+                    }}
+                >
+
+                    <a
+                        href="https://site-flash-card-b59c4.web.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="card"
+                        style={cardStyle}
+                    >
                         <h3>Génération de Flashcards</h3>
-                        <p>Créez des flashcards instantanément à partir de n'importe quel texte ou document grâce à notre IA avancée.</p>
-                    </div>
-                    <div className="card" style={cardStyle}>
+                        <p>
+                            Créez des flashcards instantanément à partir de n'importe quel texte
+                            ou document grâce à notre IA avancée.
+                        </p>
+                    </a>
+
+                    <a
+                        href="https://bobbyelfamoso.github.io/studyflow/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="card"
+                        style={cardStyle}
+                    >
                         <h3>Révisions Intelligentes</h3>
-                        <p>Un algorithme de répétition espacée optimisé pour maximiser votre rétention d'information.</p>
-                    </div>
+                        <p>
+                            Un algorithme de répétition espacée optimisé pour maximiser votre
+                            rétention d'information.
+                        </p>
+                    </a>
+
                     <div className="card" style={cardStyle}>
                         <h3>Suivi de Progression</h3>
-                        <p>Visualisez vos performances et adaptez votre apprentissage en temps réel.</p>
+                        <p>
+                            Visualisez vos performances et adaptez votre apprentissage
+                            en temps réel.
+                        </p>
                     </div>
+
                 </div>
 
                 <div style={{ textAlign: 'center' }}>
                     <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
                         Prêt à booster votre apprentissage ?
                     </p>
+
                     <a
                         href="https://site-flash-card-b59c4.web.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         style={{
                             display: 'inline-flex',
                             alignItems: 'center',
@@ -54,6 +85,7 @@ const Services = () => {
                         Accéder à Flashcards IA <span>→</span>
                     </a>
                 </div>
+
             </div>
         </section>
     );
