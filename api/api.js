@@ -1,6 +1,5 @@
-exports.handler = async function () {
-
-  const data = {
+export default function handler(req, res) {
+  res.status(200).json({
     message: "API FlashMind",
     services: [
       {
@@ -12,14 +11,5 @@ exports.handler = async function () {
         url: "https://site-flash-card-b59c4.web.app"
       }
     ]
-  }
-
-  return {
-    statusCode: 200,
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  }
-
+  })
 }
