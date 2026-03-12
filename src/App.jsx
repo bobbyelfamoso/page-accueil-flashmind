@@ -10,25 +10,15 @@ import About from "./components/About";
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <ThemeToggle />
       <Hero />
       <FlashcardDemo />
       <Team />
       <Services />
-      <Contact />
-    </div>
-  );
-}
-
-function App() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <Services />
       <About />
       <Contact />
-    </>
+    </div>
   );
 }
 
